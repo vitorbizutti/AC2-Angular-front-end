@@ -1,2 +1,2 @@
 # AC2-Angular-front-end
-Projeto feito individualmente
+Nome VITOR GABRIEL MENDES BIZUTTI    RA 222568
