@@ -1,0 +1,27 @@
+// addUser.component.ts
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-add-user',
+  templateUrl: './add-user.component.html',
+  styleUrls: ['./add-user.component.css']
+})
+export class AddUserComponent {
+  userForm = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    role: ['', Validators.required],
+    password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(15)]]
+  });
+
+  roles = ['Engenheiro de FE', 'Engenheiro de BE', 'Analista de dados', 'Líder Técnico'];
+
+  constructor(private fb: FormBuilder) {}
+
+  onSubmit() {
+    console.log(this.userForm.value);
+    // Aqui você pode adicionar a lógica para adicionar o usuário
+    // Redirecionar para a página de usuários
+  }
+}

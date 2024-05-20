@@ -1,0 +1,26 @@
+<!-- Tabela de usuários -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Função</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Substitua os valores abaixo pelos dados dos usuários -->
+    <tr *ngFor="let user of users">
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.role}}</td>
+      <td>
+        <button (click)="editUser(user.id)">Editar</button>
+        <button (click)="deleteUser(user.id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Botão para adicionar novo usuário -->
+<button (click)="addUser()">Novo Usuário</button>

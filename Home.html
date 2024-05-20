@@ -1,0 +1,20 @@
+
+<h2>Resumo dos Usuários</h2>
+<p>Quantidade de usuários cadastrados: {{users.length}}</p>
+
+<!-- Tabela de quantidade de usuários por função -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>Função</th>
+      <th>Quantidade</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr *ngFor="let role of roles">
+      <td>{{role.name}}</td>
+      <td>{{role.count}}</td>
+    </tr>
+  </tbody>
+</table>
